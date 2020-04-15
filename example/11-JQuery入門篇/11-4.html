@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery 後代選取器</title>
+    <script src="./js/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/11-4.css">
+</head>
+<body>
+    <div id="app">
+        <img id="logo" src="../images/logo2.png" alt="">
+        <ul>
+            <li><a>● 最新消息</a></li>
+            <li><a>● 關於我們</a></li>
+            <li><a>● 最新開課</a></li>
+            <li><a>● 熱門話題</a></li>
+            <li><a>● 社群影響</a></li>
+        </ul>
+    </div>
+
+    <script>
+        
+
+        $("#app a").on('click', function(){
+            console.log($(this));
+        })
+
+        // $("#app > ul > li > a").on('click', function(){
+        //     console.log($(this));
+        // })
+
+    </script>
+
+</body>
+</html>

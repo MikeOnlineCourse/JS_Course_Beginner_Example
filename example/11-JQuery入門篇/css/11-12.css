@@ -1,0 +1,61 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    font-family: "Microsoft JhengHei","Heiti TC","sans-serif";
+}
+#app{
+    width: 100%;
+    height: 100%;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+header > div{
+    
+}
+header > div > a{
+    padding: 0 30px;
+    font-size: 20px;
+}
+#app > div{
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+a{
+    cursor: pointer;
+}
+.page1{
+    background-color: cadetblue;
+}
+.page2{
+    background-color: violet
+}
+.page3{
+    background-color: tomato;
+}
+.page4{
+    background-color: slategray;
+}
+
+a#scrollTop{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    color: #fff;
+}

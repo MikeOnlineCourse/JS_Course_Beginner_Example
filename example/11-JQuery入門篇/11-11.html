@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS & Style 的兩種姿勢 </title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/11-11.css">
+    <script src="./js/jquery.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1 id="title">HISKIO</h1>
+        <div class="btnbox">
+            <a id="fontSizeBig_btn" href="javascript:;">放大</a>
+            <a id="fontSizeSmall_btn" href="javascript:;">縮小</a>
+            <a id="fontSizeNormal_btn" href="javascript:;">正常</a>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            var title = $('#title')
+            // $("#fontSizeBig_btn").on("click", function(){
+            //     title.css("font-size", "200px");
+            //     title.css("color", "#00d0ff");
+            // })
+            // $("#fontSizeSmall_btn").on("click", function(){
+            //     title.css("font-size", "100px");
+            //     title.css("color", "#fffac1");
+            // })
+            // $("#fontSizeNormal_btn").on("click", function(){
+            //     title.css("font-size", "150px");
+            //     title.css("color", "#ffffff");
+            // })
+            
+            $("#fontSizeBig_btn").on("click", function(){
+                title.css({
+                    "font-size": "200px",
+                    "color":"#00d0ff",
+                });
+
+            })
+            $("#fontSizeSmall_btn").on("click", function(){
+                title.css({
+                    "font-size": "100px",
+                    "color":"#fffac1",
+                });
+            })
+            $("#fontSizeNormal_btn").on("click", function(){
+                title.css({
+                    "font-size": "150px",
+                    "color":"#ffffff",
+                });
+
+            })
+
+
+
+        })      
+    </script>
+</body>
+</html>

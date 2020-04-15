@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> innerHTML & innerText </title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/05-10.css">
+</head>
+<body>
+    <div id="app">
+        <a id="Btn" href="javascript:;">HiSKIO 是什麼？</a>
+        <p id="tit"></p>
+    </div>
+    <script>
+        var title = document.getElementById('tit');
+        var txt = "HiSKIO是一個專注於提供學習方向與內容的<a href='https://hiskio.com/' target='_blcnk'>線上課程平台</a>，目前以程式設計為主軸。我們希望讓更多想透過網路自學的妳/ 你，能更簡單、更效率、更有興趣地學習 !"
+        document.getElementById("Btn").addEventListener("click", function(){
+            // title.innerText = txt;
+            title.innerHTML = txt;
+        });
+    </script>
+</body>
+</html>

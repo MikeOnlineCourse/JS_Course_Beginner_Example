@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery 事件</title>
+    <script src="./js/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/11-2.css">
+</head>
+<body>
+    <div id="app" class="box">
+        <h1>HISKIO</h1>
+        <a id="Btn" href="javascript:;"> > 馬上觀看最新課程</a>
+    </div>
+
+    <script>
+        $(function(){
+
+            //寫法一 ( 推薦，因為有 on也有 off )
+            $('#Btn').on('click', function(){
+                alert('尚無最新課程')
+            })
+            
+            //寫法二
+            $('#Btn').click(function(){
+                alert('尚無最新課程')
+            })
+
+        })
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> addClass、removeClass、hasClass、toggleClass</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/11-10.css">
+    <script src="./js/jquery.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <a id="Menu">
+            <span class="openBtn"><i class="fas fa-bars fa-4x"></i></span>
+            <span class="closeBtn"><i class="fas fa-times fa-4x"></i></span>
+        </a>
+        <img id="logo" src="../images/logo2.png" alt="">
+
+        
+        <ul class="navBox">
+            <li><a id="n1" class="nav">首頁 > </a></li>
+            <li><a id="n2" class="nav">關於我們 > </a></li>
+            <li><a id="n3" class="nav">連絡客服 > </a></li>
+            <li><a id="n4" class="nav">最新課程 > </a></li>
+            <li><a id="n5" class="nav">最新消息 > </a></li>
+            <li><a id="n6" class="nav">課程公告 > </a></li>
+            <li><a id="n7" class="nav">成為老師 > </a></li>
+        </ul>
+
+
+    </div>
+    <script>
+        $(function(){
+            var Menu = $("#Menu");
+            var navBox = $(".navBox");
+            Menu.on("click", function(){
+                //寫法一
+                // if( $(this).hasClass("open")){
+                //     $(this).removeClass('open');
+                //     navBox.removeClass('open');
+                // }else{
+                //     $(this).addClass('open');
+                //     navBox.addClass('open');
+                // }
+
+                //寫法二
+                $(this).toggleClass('open');
+                navBox.toggleClass('open');
+            });
+        });
+    </script>
+</body>
+</html>

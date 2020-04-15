@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>show、hide</title>
+    <script src="./js/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/11-5.css">
+</head>
+<body>
+    <div id="app">
+        <img id="logo" src="../images/logo2.png" alt="">
+        <ul>
+            <li><a class="newBtn">● 最新消息</a></li>
+            <li><a class="aboutBtn">● 關於我們</a></li>
+            <li><a class="courseBtn">● 最新開課</a></li>
+            <li><a class="hotBtn">● 熱門話題</a></li>
+            <li><a class="communityBtn">● 社群影響</a></li>
+        </ul>
+    
+    </div>
+    <div id="page">
+        <div class="page1">
+            <h1>最新消息</h1>
+            <p>您可能常看到坊間許多 JavaScript 課程包山又包海，彷彿什麼都學得到，但課程結束後，發現為什麼都無法學以致用？又或是，課程所教的技術不符合潮流，不僅只學到皮毛還落後產業技術一大截...</p>
+        </div>
+        <div class="page2">
+            <h1>關於我們</h1>
+            <p>現代 JavaScript 職人之路學程，明確的學程定位帶您往前端工程師的技術門檻前進！深厚的 JavaScript 觀念 + 大量的實戰講義 + 情境實作範例，唯一目標就是帶您取得前端工程師的入門券！</p>
+        </div>
+        <div class="page3">
+            <h1>最新開課</h1>
+            <p>
+                新手入門篇：<br/>
+                漸進式學習，搭配大量實戰講義，讓您從 0 到得心應手<br/>
+                讓您直接帶去面試的作品集，課堂練習就是作品集，省錢省力氣<br/>
+                教您業界最新知識，讓您獨立做出產業常見的網站效果及應用<br/>
+                程式排版 > 命名規則 > 清晰註解 > 邏輯明確 > 版本控制，學習coding好習慣<br/>
+                從頭到尾瞭解一個專案的開發過程，無痛對接工作應用<br/>
+            </p>
+        </div>
+        <div class="page4">
+            <h1>熱門話題</h1>
+            <p>
+                中階實戰篇：<br/>
+                學習進階開發技巧：陣列迴圈、陣列操作、字串處理等，操作資料才是王道<br/>
+                學習 JSON 應用，瞭解如何串聯伺服器與瀏覽器<br/>
+                攻略 axios 完成非同步處理使用<br/>
+                帶您無痛升級 ES6 超好用的開發技巧<br/>
+                學習前後端分離，成為後端工程師的好隊友<br/>
+                最簡單的方式去規劃程式架構<br/>
+                最後告訴你，千萬不要這樣寫 code 啊～<br/>
+            </p>
+        </div>
+        <div class="page5">
+            <h1>社群影響</h1>
+            <p>
+                > 不用擔心沒有任何程式基礎，我們從“認識程式”開始教<br/>
+                > 一步一步跟著影片學，讓您看到飽學到會<br/>
+                > 遇到問題隨時發問，只要能幫您成長，任何問題都是好問題！<br/>
+                > 漸進式學習基礎語法、變數、陣列、迴圈＆流程控制，培養程式邏輯能力<br/>
+                > 整合所學，打造學完就上手的 JavaScript 專案<br/>
+            </p>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            var newBtn = $(".newBtn");
+            var aboutBtn = $(".aboutBtn");
+            var courseBtn = $(".courseBtn");
+            var hotBtn = $(".hotBtn");
+            var communityBtn = $(".communityBtn");
+            var page1 = $(".page1");
+            var page2 = $(".page2");
+            var page3 = $(".page3");
+            var page4 = $(".page4");
+            var page5 = $(".page5");
+
+            $("#page > div").hide();
+            page1.show();
+
+            newBtn.on("click", function(){
+                $("#page > div").hide();
+                page1.show();
+            })
+            aboutBtn.on("click", function(){
+                $("#page > div").hide();
+                page2.show();
+            })
+            courseBtn.on("click", function(){
+                $("#page > div").hide();
+                page3.show();
+            })
+            hotBtn.on("click", function(){
+                $("#page > div").hide();
+                page4.show();
+            })
+            communityBtn.on("click", function(){
+                $("#page > div").hide();
+                page5.show();
+            })
+        })
+    </script>
+
+</body>
+</html>

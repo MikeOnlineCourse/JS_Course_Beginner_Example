@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>$(document).ready()</title>
+</head>
+<body>
+    <script>
+        //純javascript的onload寫法
+        window.onload = function(){
+
+        }
+
+        //jquery的onload寫法
+        $(window).on('load', function(){
+
+        })
+
+        //---------------------------------------------------
+
+        //寫法一
+        $(document).ready(function(){
+
+        })
+
+        //寫法二 (推薦，因為比較簡短)
+        $(function(){
+
+        })  
+
+    </script>
+</body>
+</html>

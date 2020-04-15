@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>計時器 setInterval()</title>
+    <link rel="stylesheet" href="./css/10-1.css">
+</head>
+<body>
+    <h1 id="time"></h1>
+
+    <script>
+        var idx = 0;
+        var time = document.getElementById('time');
+        time.innerText = idx;
+        
+        
+        var go = setInterval(function(){
+            idx++;
+            time.innerText = idx;
+
+            if(idx >= 10){
+                clearInterval(go);
+            }
+        },1000);
+        
+    </script>
+
+
+</body>
+</html>

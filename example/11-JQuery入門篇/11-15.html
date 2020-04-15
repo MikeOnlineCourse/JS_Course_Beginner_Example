@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>獲取物件的座標 - 2</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/11-12.css">
+    <script src="./js/jquery.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div class="menuBar">
+                <a data-id="0">Page1</a>
+                <a data-id="1">Page2</a>
+                <a data-id="2">Page3</a>
+                <a data-id="3">Page4</a>
+            </div>
+        </header>
+        <div class="page1">page1</div>
+        <div class="page2">page2</div>
+        <div class="page3">page3</div>
+        <div class="page4">page4</div>
+
+
+        <a id="scrollTop"><i class="fas fa-angle-double-up fa-4x"></i></a>
+    </div>
+    <script>
+        $(function(){
+            var scrollTopBtn = $("#scrollTop");
+            var MenuBtn = $(".menuBar > a");
+            var pos = [
+                $('.page1').offset().top, 
+                $('.page2').offset().top, 
+                $('.page3').offset().top, 
+                $('.page4').offset().top, 
+            ]
+
+            scrollTopBtn.on("click", function(){
+                $('html, body').stop().animate({scrollTop: 0}, 500); 
+            });
+
+            MenuBtn.on("click", function(){
+                var id = $(this).data("id");
+                $('html, body').stop().animate({scrollTop: pos[id]}, 500); 
+            });
+
+        })      
+    </script>
+</body>
+</html>

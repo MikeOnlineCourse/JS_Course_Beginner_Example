@@ -1,0 +1,62 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    font-family: "Microsoft JhengHei","Heiti TC","sans-serif";
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    display: block;
+}
+#app{
+    position: relative;
+    width: 70%;
+    height: 90%;
+}
+#app > a{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+}
+a#angleleft{
+    left: -60px;
+}
+a#angleright{
+    right: -60px;
+}
+#app > .menu{
+    width: 100%;
+    height: 20%;
+    overflow: auto;
+}
+#app > .menu > nav{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#app > .menu > nav > a{
+    cursor: pointer;
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+#app > .menu > nav > a > img{
+    width: 100%;
+} 
+#app > #contentPhone{
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+    border-bottom: 14px solid #fff;
+    background-color: #ddd;
+    
+    background-image: url("../../images/05/big/a1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+

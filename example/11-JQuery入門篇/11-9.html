@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> data attribute </title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/11-8.css">
+    <script src="./js/jquery.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div id="contentPhone">
+            <img class="photo" src="../images/05/big/a1.jpg" alt="">
+        </div>
+        <div class="menu">
+            <nav id="nav">
+                <a data-id="a1"><img src="../images/05/small/a1.jpg" alt=""></a>
+                <a data-id="a2"><img src="../images/05/small/a2.jpg" alt=""></a>
+                <a data-id="a3"><img src="../images/05/small/a3.jpg" alt=""></a>
+                <a data-id="a4"><img src="../images/05/small/a4.jpg" alt=""></a>
+                <a data-id="a5"><img src="../images/05/small/a5.jpg" alt=""></a>
+            </nav>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $("#nav > a").on('click', function(){
+                $(".photo").attr('src', '../images/05/big/'+$(this).data('id')+'.jpg')
+            });
+        });
+    </script>
+</body>
+</html>
